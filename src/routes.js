@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, IndexRoute } from 'react-router';
+import { Route, IndexRoute, Redirect } from 'react-router';
 import App from './components/App';
 import Home from './components/Home';
 import AboutUs from './components/AboutUs';
@@ -16,6 +16,7 @@ export default (
       <IndexRoute component={PostList} />
       <Route path=":postId" component={SinglePost} />
     </Route>
+    <Redirect from="/abc" to="/" />
     <Route path="*" component={NotFound} />
   </Route>
 );

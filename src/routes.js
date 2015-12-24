@@ -5,6 +5,7 @@ import Home from './components/Home';
 import AboutUs from './components/AboutUs';
 import PostList from './components/PostList';
 import SinglePost from './components/SinglePost';
+import NotFound from './components/NotFound';
 
 
 export default (
@@ -15,5 +16,6 @@ export default (
       <IndexRoute component={PostList} />
       <Route path=":postId" component={SinglePost} />
     </Route>
+    <Route path="*" component={NotFound} />
   </Route>
 );
